@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ToolListComponent } from './tool-list/tool-list.component';
 import { routing } from './app.routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolListComponent
+    ToolListComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
