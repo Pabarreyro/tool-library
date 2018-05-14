@@ -1,0 +1,31 @@
+<h2>Dashboard</h2>
+
+<div id="user-info">
+  <div>
+    <h3>Personal Information</h3>
+    <p>Username: {{user.username}}</p>
+    <p>Email: {{user.email}}</p>
+  </div>
+  <div>
+    <h3>Account Details</h3>
+    <p>Overdue Tools: <span class="text-uppercase">{{user.overdue}}</span></p>
+    <p>Late Fee Balance: ${{user.lateFee}}</p>
+  </div>
+</div>
+
+<h2>Tool Bucket</h2>
+
+<div id="tool-bucket">
+  <div *ngFor="let tool of user.tools" class="tool">
+    <h4 class="text-center">{{tool.title}}</h4>
+    <p><strong>Description:</strong><br>
+      {{tool.description}}
+    </p>
+    <p><strong>Brand:</strong><br>
+      {{tool.brand}}
+    </p>
+    <p><strong>Due Date:</strong><br>
+      {{tool.dueDate}}
+    </p>
+  </div>
+</div>
