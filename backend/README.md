@@ -7,6 +7,7 @@
 - `git clone https://github.com/m-chu/tool-library.git`
 - `cd tool-libarary/`
 - `virturalenv backend -p python3.6`
+- `cd backend`
 - `source bin/activate`
 - `cd src`
 - `pip install requirements.txt`
