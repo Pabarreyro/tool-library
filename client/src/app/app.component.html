@@ -1,4 +1,18 @@
-<nav>
-  Test
+<!-- NAVBAR -->
+<nav id="navbar">
+  <h1><a class="navbar-brand text-uppercase" href="#">Tool Library</a></h1>
+  <div id="nav-links" class="nav">
+    <a href="#">Login</a>
+    <a href="#">Register</a>
+    <a href="#">Dashboard</a>
+    <a href="#">Admin</a>
+  </div>
+  <div id="search">
+    <input class="form-control" placeholder="Search">
+    <button class="btn btn-primary">Search</button>
+  </div>
 </nav>
-<router-outlet></router-outlet>
+<!-- CONTENT -->
+<div id="main" class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
