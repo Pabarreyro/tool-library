@@ -1,0 +1,41 @@
+#navbar {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #007bff;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar h1 {
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links {
+  align-items: center;
+  display: flex;
+}
+
+#nav-links a {
+  margin: 0 15px 0 0;
+}
+
+#search {
+  display: flex;
+}
+
+#search .btn {
+  border: none;
+  margin: 0 10px;
+}
+
+#main {
+  padding-top: 80px;
+}
