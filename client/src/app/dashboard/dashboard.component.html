@@ -16,16 +16,20 @@
 <h2>Tool Bucket</h2>
 
 <div id="tool-bucket">
-  <div *ngFor="let tool of user.tools" class="tool">
-    <h4 class="text-center">{{tool.title}}</h4>
-    <p><strong>Description:</strong><br>
-      {{tool.description}}
-    </p>
-    <p><strong>Brand:</strong><br>
-      {{tool.brand}}
-    </p>
-    <p><strong>Due Date:</strong><br>
-      {{tool.dueDate}}
-    </p>
+  <div *ngFor="let tool of user.tools" class="card">
+    <div class="card-header bg-dark text-white">
+      <h4 class="text-center">{{tool.title}}</h4>
+    </div>
+    <div class="card-body">
+      <p><strong>Description:</strong><br>
+        {{tool.description}}
+      </p>
+      <p><strong>Brand:</strong><br>
+        {{tool.brand}}
+      </p>
+      <p><strong>Due Date:</strong><br>
+        {{tool.dueDate}}
+      </p>
+    </div>
   </div>
 </div>
