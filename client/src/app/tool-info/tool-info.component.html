@@ -1,55 +1,24 @@
-
-
-    <div class="tools-contain">
-
-<!-- ================ Example=================== -->
-      <div class="toolsList">
-        <div class="toolItemHeader">
-          <span title="title" class="toolName" style="cursor: pointer;">"{{tool.title}\}"
-            <span class="avail-y">{{tool.status}\}
-              <span class="icon-zip-up"><button type="button" class="btn btn-lg btn-info"></button>
-              </span>
-            </span>
+<div class="tools-contain">
+  <div *ngFor="let tool of tools"  class="toolsList">
+    <div class="toolItemHeader">
+      <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
+        <span class="avail-y">{{tool.status}}
+          <span class="icon-zip-up">
+            <button type="button" class="btn btn-lg btn-info" data-toggle="collapse" data-target="#toolAttrCollapse" aria-expanded="false" aria-controls="#toolAttrCollapse"></button>
           </span>
-        </div>
-
-        <div class="" id="toolAttrCollapse">
-          <div class="card card-body AttrDetails">
-            <ul>
-              <li>Descr: {{description}\} </li>
-              <li>Parts:</li>
-              <li>Brand: {{brand}\} </li>
-              <li>ID:{{pk}\}</li>
-              <li>Late Fine: {{lateFee}\}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-<!-- ====================================== -->
-
-<!-- =================The Real Deal===================== -->
-<div *ngFor="let tool of tools | async"  class="toolsList">
-  <div class="toolItemHeader">
-    <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
-      <span class="avail-y">{{tool.status}}
-        <span class="icon-zip-up"><button type="button" class="btn btn-lg btn-info "></button>
         </span>
       </span>
-    </span>
+    </div>
+    <div class="collapse" id="toolAttrCollapse">
+      <div class="card card-body AttrDetails">
+        <ul>
+          <li>Descr: {{tool.description}} </li>
+          <li>Parts: </li>
+          <li>Brand: {{tool.brand}} </li>
+          <li>ID:{{tool.pk}}</li>
+          <li>Late Fine: {{tool.lateFee}}</li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-  <div class="" id="toolAttrCollapse">
-    <div class="card card-body AttrDetails">
-      <ul>
-        <li>Descr: {{tool.description}} </li>
-        <li>Parts: </li>
-        <li>Brand: {{tool.brand}} </li>
-        <li>ID:{{tool.pk}}</li>
-        <li>Late Fine: {{tool.lateFee}}</li>
-      </ul>
-    </div>
-
 </div>
-</div>
-
-    </div>

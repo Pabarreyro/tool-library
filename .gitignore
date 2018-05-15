@@ -158,3 +158,4 @@ db.sqlite3
 
 #
 pip-selfcheck.json
+*db.sqlite3

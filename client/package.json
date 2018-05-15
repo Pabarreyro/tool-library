@@ -22,8 +22,12 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "angular-popper": "^1.0.0",
+<<<<<<< HEAD
     "angular-resize-event": "^0.4.2",
     "bootstrap": "^4.0.0",
+=======
+    "bootstrap": "^4.1.0",
+>>>>>>> 51dcf32338be8dc72bf4352ad33d489fb14a7d52
     "core-js": "^2.4.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
