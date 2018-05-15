@@ -7,7 +7,7 @@ import { ToolListComponent } from './tool-list/tool-list.component';
 import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
-import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
     ToolListComponent,
     DashboardComponent,
     ToolInfoComponent,
-    FooterComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
