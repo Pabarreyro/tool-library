@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -14,12 +15,12 @@ export class RegisterComponent {
   passwordFirstValid: boolean = null;
   passwordSecondValid: boolean = null;
 
-  constructor(private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   submitNewUser(username, email, passwordFirst, passwordSecond) {
     this.validateInput(username, email, passwordFirst, passwordSecond);
     if (this.usernameValid && this.emailValid && this.passwordFirstValid && this.passwordSecondValid) {
-      this.createNewUser(username, email, passwordFirst);
+      this.sendNewUserRequest(username, email, passwordFirst);
     } else {
       alert('Registration Failed.');
     }
@@ -55,7 +56,8 @@ export class RegisterComponent {
     }
   }
 
-  createNewUser(username: string, email: string, password: string) {
-    alert('Start Create New User. [CONNECT BACKEND]')
+  sendNewUserRequest(username: string, email: string, password: string) {
+    this.userService.createNewUser(username, email, password);
+    this.router.navigate(['']);
   }
 }
