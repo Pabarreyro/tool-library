@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<div id="login-form" class="card">
+  <div class="card-header bg-primary text-white">
+    <h2 class="text-center">Login</h2>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <h3>Username <span *ngIf="usernameValid === false" class="error-message">(User does not exist.)</span></h3>
+      <input class="form-control" #username>
+    </div>
+    <div class="form-group">
+      <h3>Password</h3>
+      <input class="form-control" #password>
+    </div>
+    <button (click)="submitLogin(username.value, password.value)" class="btn btn-success">Submit</button>
+  </div>
+</div>
