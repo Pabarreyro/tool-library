@@ -40,12 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-<<<<<<< Updated upstream
-    'corsheaders',
-
-=======
+    'corsheaders'
     'accounts',
->>>>>>> Stashed changes
     'tools',
 ]
 
@@ -123,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ORIGIN_ALLOW_ALL = False # Always false
 
 CORS_ORIGIN_WHITELIST = ( # Authorize origins here
-    'http//:localhost:8000',
+    'http//:localhost:4200',
 )
 
 # Internationalization
