@@ -70,8 +70,8 @@
   color: white;
 }
 
-@media only screen and (max-width:880px){
-  .footer-big-link a{
+@media only screen and (max-width:885px){
+  .footer-big-link, .footer-big-link a, .footer-big-link a:hover{
     font-size:26px;
   }
 }

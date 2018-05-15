@@ -11,18 +11,20 @@ export class HeaderComponent implements OnInit {
   breakpoint: number = 885;
   constructor() { }
 
-  onResize(event) {
-      const w = event.target.innerWidth;
-      if (w >= this.breakpoint) {
-        this.toggleNavBar = true;
-        this.toggleMobileNavBar = false;
-      } else {
-        this.toggleNavBar = false;
-        this.toggleMobileNavBar = true;
-      }
-    }
-
   ngOnInit() {
+    this.onResize();
   }
+
+  onResize() {
+    const w = document.getElementById('navbar').clientWidth;
+    if (w <= this.breakpoint) {
+      this.toggleNavBar = false;
+      this.toggleMobileNavBar = true;
+    } else if (w >= this.breakpoint){
+      this.toggleNavBar = true;
+      this.toggleMobileNavBar = false;
+    }
+  }
+
 
 }
