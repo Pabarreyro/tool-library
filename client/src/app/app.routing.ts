@@ -7,7 +7,7 @@ import { ToolInfoComponent } from './tool-info/tool-info.component';
 const appRoutes: Routes = [
   {
   path: '',
-  component: ToolListComponent
+  component: ToolInfoComponent
 },
 {
 path: 'tool-info',
