@@ -40,11 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
 
     'tools',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # Must be first; handles CORS
+    'django.middleware.common.BrokenLinkEmailsMiddleware', # Emails 404 errors
+    'django.middleware.common.CommonMiddleware', # Generates response
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -108,6 +112,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Cors-header configuration
+# Note: CORS_ORIGIN_REGEX_WHITELIST also available for authorizing origins.
+# https://github.com/ottoyiu/django-cors-headers
+
+CORS_ORIGIN_ALLOW_ALL = False # Always false
+
+CORS_ORIGIN_WHITELIST = ( # Authorize origins here
+    'http//:localhost:8000',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -122,12 +135,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = '/static/'
-
-
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
