@@ -22,3 +22,14 @@ span.avail-y {
 .icon-zip-up {
 margin-left: 130px;
 }
+
+
+.collapse .toolItemHeader:after {
+    font-family: 'FontAwesome';
+    content: "\f068";
+    float: right;
+}
+.collapse .toolItemHeader.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067";
+}
