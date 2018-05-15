@@ -8,15 +8,11 @@ import { ToolInfoComponent } from './tool-info/tool-info.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: ToolListComponent
+    component: ToolInfoComponent
   },
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'tool-info',
-    component: ToolInfoComponent
   },
   {
     path: 'dashboard',
