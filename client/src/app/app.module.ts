@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ToolListComponent } from './tool-list/tool-list.component';
 import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ToolInfoComponent } from './tool-info/tool-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolListComponent,
-    DashboardComponent
+    DashboardComponent,
+    ToolInfoComponent
   ],
   imports: [
     BrowserModule,
