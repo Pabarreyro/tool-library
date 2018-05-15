@@ -2,14 +2,12 @@
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
-  min-width: 250px;
   width: 300px;
-  max-width: 300px;
   height: auto;
-  flex: 1;
   margin: 20px;
   background-color: #DDDDDD;
   box-shadow:8px 10px 20px 0 rgba(46,61,73,.15);
