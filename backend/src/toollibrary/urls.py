@@ -23,6 +23,9 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/tools/', include('tools.api.urls')),
+    url(r'^api/auth/', include('accounts.api.urls', namespace='api-auth')),
+    url(r'^api/user/', include('accounts.api.user.urls', namespace='api-user')),    
+    
 ]
 
 

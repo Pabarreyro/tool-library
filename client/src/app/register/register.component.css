@@ -1,0 +1,24 @@
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+button.btn {
+  display: block;
+  margin: 0 auto;
+}
+
+#register-form {
+  margin: 50px auto;
+  width: 500px;
+}
+
+.error-message {
+  color: #f00;
+  float: right;
+  font-size: 0.9rem;
+}

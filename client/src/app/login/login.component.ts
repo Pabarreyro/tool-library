@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Component({
@@ -11,12 +12,12 @@ import { UserService } from '../user.service';
 export class LoginComponent {
   usernameValid: boolean = null;
 
-  constructor(private userService: UserService) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   submitLogin(username, password) {
     this.validateInput(username);
     if (this.usernameValid) {
-      this.authenticateLogin(username, password);
+      this.sendUserAuthRequest(username, password);
     } else {
       alert('Login Failed.');
     }
@@ -31,7 +32,8 @@ export class LoginComponent {
     }
   }
 
-  authenticateLogin(username: string, password: string) {
-    alert('Login Auth Sent. [CONNECT BACKEND]')
+  sendUserAuthRequest(username: string, password: string) {
+    this.userService.loginUser(username, password);
+    this.router.navigate(['']);
   }
 }

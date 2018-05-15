@@ -2,21 +2,22 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ToolListComponent } from './tool-list/tool-list.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: ToolListComponent
+    component: ToolInfoComponent
   },
   {
     path: 'login',
     component: LoginComponent
   },
   {
-    path: 'tool-info',
-    component: ToolInfoComponent
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'dashboard',

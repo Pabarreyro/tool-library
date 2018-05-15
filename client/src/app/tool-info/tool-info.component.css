@@ -1,0 +1,26 @@
+.tools-contain {
+display: flex;
+justify-content: center;
+
+}
+
+.toolsList {
+  width: 258px;
+margin: 10px;
+}
+
+.toolItemHeader {
+  background-color: #ccc;
+  padding: 6px 8px 4px 12px;
+}
+
+
+span.avail-y {
+  display:block;
+  font-style: italic;
+  color: #777777;
+}
+
+.icon-zip-up {
+margin-left: 130px;
+}

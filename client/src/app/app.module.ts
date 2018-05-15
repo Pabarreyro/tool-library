@@ -8,7 +8,11 @@ import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
+=======
+import { RegisterComponent } from './register/register.component';
+>>>>>>> 51dcf32338be8dc72bf4352ad33d489fb14a7d52
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { FooterComponent } from './footer/footer.component';
     DashboardComponent,
     ToolInfoComponent,
     LoginComponent,
+<<<<<<< HEAD
     FooterComponent,
+=======
+    RegisterComponent
+>>>>>>> 51dcf32338be8dc72bf4352ad33d489fb14a7d52
   ],
   imports: [
     BrowserModule,

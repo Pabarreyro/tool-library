@@ -1,0 +1,24 @@
+<div id="register-form" class="card">
+  <div class="card-header bg-success text-white">
+    <h2 class="text-center">Register</h2>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <h3>Username <span *ngIf="usernameValid === false" class="error-message">Required (no spaces).</span></h3>
+      <input class="form-control" #username>
+    </div>
+    <div class="form-group">
+      <h3>Email <span *ngIf="emailValid === false" class="error-message">Required.</span></h3>
+      <input class="form-control" #email>
+    </div>
+    <div class="form-group">
+      <h3>Password <span *ngIf="passwordFirstValid === false" class="error-message">Required.</span></h3>
+      <input class="form-control" #passwordFirst>
+    </div>
+    <div class="form-group">
+      <h3>Re-Enter Password <span *ngIf="passwordSecondValid === false" class="error-message">Passwords do not match.</span></h3>
+      <input class="form-control" #passwordSecond>
+    </div>
+    <button (click)="submitNewUser(username.value, email.value, passwordFirst.value, passwordSecond.value)" class="btn btn-success">Submit</button>
+  </div>
+</div>

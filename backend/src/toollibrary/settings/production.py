@@ -39,11 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',
 
+    'accounts',  
     'tools',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', # Must be first; handles CORS
+    'django.middleware.common.BrokenLinkEmailsMiddleware', # Emails 404 errors
+    'django.middleware.common.CommonMiddleware', # Generates response
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -109,6 +114,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Cors-header configuration
+# Note: CORS_ORIGIN_REGEX_WHITELIST also available for authorizing origins.
+# https://github.com/ottoyiu/django-cors-headers
+
+CORS_ORIGIN_ALLOW_ALL = False # Always false
+
+CORS_ORIGIN_WHITELIST = ( # Authorize origins here
+    'http//:localhost:8000',
+)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -140,3 +155,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+
+
+from toollibrary.tlrestconf.main import *
