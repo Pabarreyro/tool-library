@@ -1,0 +1,63 @@
+.footer-container-outer {
+  background: -webkit-linear-gradient(rgba(0, 123, 255, 0) .1%, rgba(0, 123, 255, 1));
+  background: -o-linear-gradient(rgba(0, 123, 255, 0) .1%, rgba(0, 123, 255, 1));
+  background: linear-gradient(rgba(0, 123, 255, 0) .1%, rgba(0, 123, 255, 1));
+  width: 100%;
+  height: auto;
+  color: white;
+  padding: 55px 0 35px 0;
+}
+
+.footer-container-inner {
+  width: 100%;
+}
+
+.footer-container-inner, .footer-right-nav{
+  display: inline-flex;
+  justify-content: flex-start;
+}
+
+.footer-left-nav, .footer-center-nav, .footer-right-nav {
+  margin: auto;
+  padding: 0 50px;
+}
+
+/* LEFT NAV  */
+.footer-left-nav {
+  width: 15%;
+}
+
+.footer-left-nav img {
+  height: 100px;
+  width: auto;
+}
+
+
+/* CETNTER NAV; */
+.footer-center-nav {
+  width: 55%
+}
+
+.footer-big-link, .footer-big-link a, .footer-big-link a:hover{
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.footer-big-link a, .footer-big-link a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* RIGHT NAV; */
+.footer-right-nav {
+  width: 40%;
+}
+
+.footer-right-nav-list {
+  margin-left: 25px;
+}
+
+.footer-right-nav-list-item {
+  font-family: 'Open Sans', sans-serif;
+}
