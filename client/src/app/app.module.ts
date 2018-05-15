@@ -7,13 +7,15 @@ import { ToolListComponent } from './tool-list/tool-list.component';
 import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolListComponent,
     DashboardComponent,
-    ToolInfoComponent
+    ToolInfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
