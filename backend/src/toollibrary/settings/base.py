@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
-    'storages','tools',
+    'storages',
+    'tools',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -168,3 +170,7 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+
+
+
+from toollibrary.tlrestconf.main import *

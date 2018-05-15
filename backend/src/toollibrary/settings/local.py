@@ -41,8 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-
+    
     'storages',
+    'accounts',
     'tools',
 ]
 
@@ -167,3 +168,6 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'media_root')
+
+
+from toollibrary.tlrestconf.main import *

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'storages',
+    'accounts',
     'tools',
 ]
 
@@ -175,3 +176,6 @@ DEFAULT_FILE_STORAGE = 'toollibrary.storage_backends.MediaStorage'
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
+
+
+from toollibrary.tlrestconf.main import *
