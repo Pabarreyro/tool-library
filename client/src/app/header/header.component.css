@@ -3,7 +3,7 @@
   background-color: #fff;
   border-bottom: 1px solid #007bff;
   display: flex;
-  height: 160px;
+  height: 60px;
   justify-content: space-between;
   padding-left: 50px;
   padding-right: 50px;
@@ -56,10 +56,16 @@
   transform: scaleX(1);
 }
 
-#nav-links {
-  align-items: center;
+.hide-nav-wrapper {
   display: flex;
+  justify-content:space-between;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Montserrat', sans-serif;
+  margin: auto;
 }
 
 .nav-link {
@@ -75,6 +81,4 @@
   margin: 0 10px;
 }
 
-@media only screen and (max-width:885px) {
-
-}
+/* ==============MOBILE============= */

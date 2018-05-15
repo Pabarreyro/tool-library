@@ -6,14 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isIn = false;   // store state
-    toggleState() { // click handler
-        let bool = this.isIn;
-        this.isIn = bool === false ? true : false;
-    }
-
-
+  toggleNavBar: boolean = true;
+  toggleMobileNavBar: boolean = false;
+  breakpoint: number = 885;
   constructor() { }
+
+  onResize(event) {
+      const w = event.target.innerWidth;
+      if (w >= this.breakpoint) {
+        this.toggleNavBar = true;
+        this.toggleMobileNavBar = false;
+      } else {
+        this.toggleNavBar = false;
+        this.toggleMobileNavBar = true;
+      }
+    }
 
   ngOnInit() {
   }

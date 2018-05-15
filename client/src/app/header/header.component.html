@@ -1,20 +1,8 @@
 <nav id="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+  <div class="navbar-header">
       <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
-    </div>
   </div>
-
-
-  <div class="collapse navbar-collapse in"
-    [ngClass]="{ 'in': isIn }"
-    (click)="toggleState()">
+  <div class="hide-nav-wrapper" *ngIf="toggleNavBar"  (window:resize)="onResize($event)">
     <div class="nav" id="nav-links">
       <div class="underline-link">
         <a class="underline-link nav-link" routerLink="login">Login</a>
@@ -33,5 +21,26 @@
       <button class="btn btn-primary">Search</button>
     </div>
   </div>
+
+  <div class="mobile-nav-wrapper" (window:resize)="onResize($event)" *ngIf="toggleMobileNavBar">
+    <div class="mobile-nav" id="mobile-nav-links">
+      <div class="underline-link">
+        <a class="underline-link mobile-nav-link" routerLink="login">Login</a>
+      </div>
+
+      <div class="underline-link">
+        <a class="underline-link mobile-nav-link" href="#">Register</a>
+      </div>
+
+      <div class="underline-link">
+        <a class="underline-link mobile-nav-link" routerLink="dashboard">Dashboard</a>
+      </div>
+    </div>
+    <div id="search">
+      <input class="form-control" placeholder="Search">
+      <button class="btn btn-primary">Search</button>
+    </div>
+  </div>
+
 
 </nav>
