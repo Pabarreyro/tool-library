@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
+    'storages',
     'tools',
 ]
 
@@ -119,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ORIGIN_ALLOW_ALL = False # Always false
 
 CORS_ORIGIN_WHITELIST = ( # Authorize origins here
-    'http//:localhost:8000',
+    'http//:localhost:4200',
 )
 
 # Internationalization
@@ -135,15 +136,34 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_URL = '/static/'
+# # Static files (CSS, JavaScript, Images)
+# # https://docs.djangoproject.com/en/1.11/howto/static-files/
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
+#
+# STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'static_root')
+
+# Static file storage with S3
+# Easy guide: https://simpleisbetterthancomplex.com/tutorial/2017/08/01/how-to-setup-amazon-s3-in-a-django-project.html#working-with-static-assets-only
+# Documentation: http://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#usage
+
+AWS_ACCESS_KEY_ID = os.environ.get(ACCESS_KEY_ID)
+AWS_SECRET_ACCESS_KEY = os.environ.get(SECRET_ACCESS_KEY)
+AWS_STORAGE_BUCKET_NAME = 'tool-lib-static'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'live-static-files'),
 ]
-
-STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'static_root')
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'media_root')
