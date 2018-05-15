@@ -1,0 +1,50 @@
+<nav id="navbar" (window:resize)="onResize()">
+
+  <!-- MOBILE WIDTH -->
+  <div class="navbar-header" *ngIf="toggleMobileNavBar">
+      <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
+      <div class="mobile-nav-wrapper">
+        <div class="mobile-nav" id="mobile-nav-links">
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" routerLink="login">Login</a>
+          </div>
+
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" href="#">Register</a>
+          </div>
+
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" routerLink="dashboard">Dashboard</a>
+          </div>
+        </div>
+        <div id="mobileSearch">
+          <input class="form-control" placeholder="Search">
+          <button class="btn btn-primary">Search</button>
+        </div>
+      </div>
+  </div>
+
+  <!-- FULL WIDTH -->
+  <div class="nav-wrapper" *ngIf="toggleNavBar">
+    <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
+    <div class="nav" id="nav-links">
+      <div class="underline-link">
+        <a class="underline-link nav-link" routerLink="login">Login</a>
+      </div>
+
+      <div class="underline-link">
+        <a class="underline-link nav-link" href="#">Register</a>
+      </div>
+
+      <div class="underline-link">
+        <a class="underline-link nav-link" routerLink="dashboard">Dashboard</a>
+      </div>
+    </div>
+    <div id="search">
+      <input class="form-control" placeholder="Search">
+      <button class="btn btn-primary">Search</button>
+    </div>
+  </div>
+
+
+</nav>

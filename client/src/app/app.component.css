@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:300,400');
 
-/* BASE STYLES */
-
-h1, h2, h3, h4 h5 {
-  font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-}
-
 #navbar {
   align-items: center;
   background-color: #fff;
@@ -32,22 +22,14 @@ p {
   text-transform: uppercase;
 }
 
-#nav-links {
-  align-items: center;
-  display: flex;
+/* BASE STYLES */
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-#nav-links a {
-  margin: 0 15px 0 0;
-}
-
-#search {
-  display: flex;
-}
-
-#search .btn {
-  border: none;
-  margin: 0 10px;
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 #main {
