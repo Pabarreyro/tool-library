@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+<<<<<<< Updated upstream
     'corsheaders',
 
+=======
+    'accounts',
+>>>>>>> Stashed changes
     'tools',
 ]
 
@@ -147,3 +151,6 @@ STATIC_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'static_roo
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), 'static_cdn', 'media_root')
+
+
+from toollibrary.tlrestconf.main import *
