@@ -1,10 +1,12 @@
 .tools-contain {
 display: flex;
+justify-content: center;
+
 }
 
 .toolsList {
   width: 258px;
-
+margin: 10px;
 }
 
 .toolItemHeader {
