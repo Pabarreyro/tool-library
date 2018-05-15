@@ -8,6 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./dashboard.component.css'],
   providers: [UserService]
 })
+
 export class DashboardComponent implements OnInit {
   user: User;
 
