@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:300,400');
+
+/* BASE STYLES */
+
+h1, h2, h3, h4 h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
 #navbar {
   align-items: center;
   background-color: #fff;
