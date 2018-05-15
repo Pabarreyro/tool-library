@@ -7,6 +7,10 @@ h3 {
   font-size: 1.1rem;
 }
 
+h4 {
+  margin: 0;
+}
+
 p {
   margin: 10px 0;
 }
@@ -24,10 +28,4 @@ p {
 #tool-bucket {
   display: flex;
   padding: 25px;
-}
-
-.tool {
-  border: 1px solid #28a745;
-  border-radius: 0.25rem;
-  padding: 20px;
 }
