@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   component: ToolListComponent
 },
 {
-path: 'toolinfo',
+path: 'tool-info',
 component: ToolInfoComponent
 },
 {
