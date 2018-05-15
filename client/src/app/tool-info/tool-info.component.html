@@ -1,72 +1,55 @@
-<!-- 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
-
-    <!-- Small switch -->
-<div class="form-group">
-  <span class="switch switch-sm">
-    <input type="checkbox" class="switch" id="switch-sm">
-    <label for="switch-sm">Small switch</label>
-  </span>
-</div>
 
     <div class="tools-contain">
 
-      <div class="category">
-        <!-- Tool Category -->
-        <h3>Jump to Category:</h3>
-        <ul>
-          <li><a href="#">Gardening Tools</a></li>
-          <li><a href="#">Carpentry and Woodworking</a></li>
-          <li><a href="#">Floor and Wall</a></li>
-          <li><a href="#">Plumbing</a></li>
-          <li><a href="#">Electrical (NOT powertools)</a></li>
-          <li><a href="#">Automotive</a></li>
-          <li><a href="#">Bicycle</a></li>
-          <li><a href="#">Tiling</a></li>
-          <li><a href="#">Ladders</a></li>
-          <li><a href="#">Clamps</a></li>
-          <li><a href="#">Power Tool Accessories</a></li>
-          <li><a href="#">Miscellaneous</a></li>
-        </ul>
-
-      </div>
-
-
+<!-- ================ Example=================== -->
       <div class="toolsList">
-
-
-
-        <div class="toolItem1">
-          <span data-id="33464" title="" class="toolName hovery" style="cursor: pointer;">Axe (28")
-            <span class="avail-y">Available
-              <span class="zippy icon-zip-up"><button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#content"></button>
+        <div class="toolItemHeader">
+          <span title="title" class="toolName" style="cursor: pointer;">"{{tool.title}\}"
+            <span class="avail-y">{{tool.status}\}
+              <span class="icon-zip-up"><button type="button" class="btn btn-lg btn-info"></button>
               </span>
             </span>
           </span>
         </div>
 
-        <div  id="content" class="collapse">
-          <ul>
-            <li>Descr:</li>
-            <li>Parts:</li>
-            <li>Brand:</li>
-            <li>Model:</li>
-            <li>Late Fine: </li>
-            <li>ID:</li>
-          </ul>
+        <div class="" id="toolAttrCollapse">
+          <div class="card card-body AttrDetails">
+            <ul>
+              <li>Descr: {{description}\} </li>
+              <li>Parts:</li>
+              <li>Brand: {{brand}\} </li>
+              <li>ID:{{pk}\}</li>
+              <li>Late Fine: {{lateFee}\}</li>
+            </ul>
+          </div>
         </div>
-
       </div>
+<!-- ====================================== -->
 
+<!-- =================The Real Deal===================== -->
+<div *ngFor="let tool of tools | async"  class="toolsList">
+  <div class="toolItemHeader">
+    <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
+      <span class="avail-y">{{tool.status}}
+        <span class="icon-zip-up"><button type="button" class="btn btn-lg btn-info "></button>
+        </span>
+      </span>
+    </span>
+  </div>
 
-      <div class="">
+  <div class="" id="toolAttrCollapse">
+    <div class="card card-body AttrDetails">
+      <ul>
+        <li>Descr: {{tool.description}} </li>
+        <li>Parts: </li>
+        <li>Brand: {{tool.brand}} </li>
+        <li>ID:{{tool.pk}}</li>
+        <li>Late Fine: {{tool.lateFee}}</li>
+      </ul>
+    </div>
 
-      </div>
-
+</div>
+</div>
 
     </div>
