@@ -157,3 +157,4 @@ Thumbs.db
 
 #
 pip-selfcheck.json
+*db.sqlite3
