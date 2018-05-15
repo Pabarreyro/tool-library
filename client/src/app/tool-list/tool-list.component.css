@@ -1,0 +1,44 @@
+.tools-contain {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.card {
+  min-width: 250px;
+  max-width: 400px;
+  height: auto;
+  flex: 1;
+  margin: 20px;
+  background-color: #DDDDDD;
+  box-shadow:8px 10px 20px 0 rgba(46,61,73,.15);
+}
+
+.card:hover{
+  box-shadow: 2px 4px 8px 0 rgba(46,61,73,.2);
+}
+
+
+img {
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card-text {
+  text-align: center;
+  font-family: verdana;
+  font-weight: bold;
+  margin-top: 11%;
+  color: #000000b5;
+
+}
+
+.card-body {
+  height: 70px;
+  padding: 0;
+  background-color: #DDDDDD;
+
+}
