@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 import { ToolListComponent } from './tool-list/tool-list.component';
 import { routing } from './app.routing';
@@ -9,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
     ToolInfoComponent,
     LoginComponent,
     FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
