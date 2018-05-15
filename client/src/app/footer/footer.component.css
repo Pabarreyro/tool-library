@@ -59,5 +59,37 @@
 }
 
 .footer-right-nav-list-item {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.footer-right-nav-list-item-link, .footer-right-nav-list-item-link:hover {
+  border-bottom: 1px solid white;
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width:880px){
+  .footer-big-link a{
+    font-size:26px;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .footer-container-inner, .footer-right-nav, .footer-center-nav, .footer-left-nav {
+    display: block;
+    padding: 10px 0 0 20px;
+    width:100%;
+  }
+
+  .footer-right-nav-list {
+    margin:0;
+  }
+}
+
+@media only screen and (max-width:456px){
+  .footer-big-link {
+    font-size:26px;
+  }
 }

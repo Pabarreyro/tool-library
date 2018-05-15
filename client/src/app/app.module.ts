@@ -8,6 +8,7 @@ import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     ToolListComponent,
     DashboardComponent,
     ToolInfoComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
