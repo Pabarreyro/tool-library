@@ -46,9 +46,7 @@ class UserRegisterSerializer(serializers.ModelSerializer):
       'password2',
       'token',
       'expires',
-
       'message',
-
     ]
     extra_kwargs = {'password': {'write_only': True}}
 
@@ -91,3 +89,4 @@ class UserRegisterSerializer(serializers.ModelSerializer):
     user_obj.is_active = False
     user_obj.save()
     return user_obj
+

@@ -25,4 +25,4 @@ class UserDetailSerializer(serializers.ModelSerializer):
 
   def get_uri(self, obj):
     request = self.context.get('request')
-    return api_reverse("api-user:detail", kwargs={"username": obj.username}, request=request)
+    return api_reverse("api-user:detail", kwargs={"pk": obj.pk}, request=request)

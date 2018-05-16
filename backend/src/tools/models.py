@@ -51,7 +51,7 @@ class Tool(models.Model):
   title = models.CharField(max_length=120)
   createDate = models.DateTimeField(auto_now_add=True)
   description = models.TextField(blank=True, null=True)
-  brand = models.CharField(max_length=120)
+  brand = models.CharField(max_length=120, blank=True, null=True)
   dueDate = models.DateTimeField(blank=True, null=True)
   status = models.CharField(max_length=120, default='available', choices=STATUS_CHOICES)
   imgUrl = models.CharField(max_length=120)

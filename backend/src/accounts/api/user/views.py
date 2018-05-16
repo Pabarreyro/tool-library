@@ -10,7 +10,8 @@ class UserDetailAPIView(generics.RetrieveAPIView):
   permission_classes = [permissions.IsAuthenticatedOrReadOnly]
   queryset = User.objects.filter(is_active=True)
   serializer_class = UserDetailSerializer
-  lookup_field = 'username'  # id
+  # lookup_field = 'username'  # id
 
   def get_serializer_context(self):
+    # print(self.request.user)
     return {'request': self.request}
