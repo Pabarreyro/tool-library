@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolInfoComponent } from './tool-info/tool-info.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',
