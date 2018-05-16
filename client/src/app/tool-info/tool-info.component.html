@@ -4,7 +4,7 @@
   <div *ngFor="let tool of tools"  class="toolsList">
     <div class="toolItemHeader">
       <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
-        <p class="avail-y">{{tool.status}}</p>
+        <p class="avail-y" attr.data-value="{{tool.status}}">{{tool.status}}</p>
           <span class="icon-zip-up">
             <div class="collapsed" data-toggle="collapse" attr.data-target="#{{tool.pk}}" aria-expanded="false" attr.aria-controls="{{tool.pk}}"></div>
           </span>
