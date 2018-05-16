@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -33,7 +36,9 @@ export class LoginComponent {
   }
 
   sendUserAuthRequest(username: string, password: string) {
-    this.userService.loginUser(username, password);
+    let user = new User(username=username, password=password);
+    console.log(user);
+    this.userService.loginUser(user);
     this.router.navigate(['']);
   }
 }
