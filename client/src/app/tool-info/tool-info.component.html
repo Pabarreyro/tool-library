@@ -4,11 +4,11 @@
   <div *ngFor="let tool of tools"  class="toolsList">
     <div class="toolItemHeader">
       <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
-        <span class="avail-y">{{tool.status}}
+        <p class="avail-y">{{tool.status}}</p>
           <span class="icon-zip-up">
             <div class="collapsed" data-toggle="collapse" attr.data-target="#{{tool.pk}}" aria-expanded="false" attr.aria-controls="{{tool.pk}}"></div>
           </span>
-        </span>
+
       </span>
     </div>
     <div class="collapse" attr.id="{{tool.pk}}">
@@ -19,7 +19,12 @@
           <li>Brand: {{tool.brand}} </li>
           <li>Late Fine: {{tool.lateFee}}</li>
         </ul>
+
       </div>
     </div>
+    <!-- <span class="collapsed" data-toggle="collapse" attr.data-target="#{{tool.pk}}" aria-expanded="false" attr.aria-controls="{{tool.pk}}"> -->
+      <img class="card-img-bottom" data-toggle="img-collapse" attr.src="{{tool.imgUrl}}" alt="Card image cap">
+
   </div>
+
 </div>
