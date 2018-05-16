@@ -119,11 +119,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Note: CORS_ORIGIN_REGEX_WHITELIST also available for authorizing origins.
 # https://github.com/ottoyiu/django-cors-headers
 
-CORS_ORIGIN_ALLOW_ALL = False # Always false
+CORS_ORIGIN_ALLOW_ALL = True # If true, no CORS
 
-CORS_ORIGIN_WHITELIST = ( # Authorize origins here
-    'http//:localhost:4200',
-)
+CORS_ALLOW_CREDENTIALS = False 
+
+# CORS_ORIGIN_WHITELIST = ( # Authorize origins here
+#     'http//:localhost:4200',
+# )
 
 
 # Internationalization
