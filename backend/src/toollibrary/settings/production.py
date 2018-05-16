@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'storages',
+    's3direct',
     'accounts',
     'tools',
 ]
@@ -121,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ORIGIN_ALLOW_ALL = True # If true, no CORS
 
-CORS_ALLOW_CREDENTIALS = False 
+CORS_ALLOW_CREDENTIALS = False
 
 # CORS_ORIGIN_WHITELIST = ( # Authorize origins here
 #     'http//:localhost:4200',

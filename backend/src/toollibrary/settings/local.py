@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'storages',
+    's3direct',
     'accounts',
     'tools',
 ]
