@@ -46,13 +46,12 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware', # Must be first; handles CORS
     'django.middleware.common.BrokenLinkEmailsMiddleware', # Emails 404 errors
+    'corsheaders.middleware.CorsMiddleware', # Must be first; handles CORS
     'django.middleware.common.CommonMiddleware', # Generates response
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -118,11 +117,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Note: CORS_ORIGIN_REGEX_WHITELIST also available for authorizing origins.
 # https://github.com/ottoyiu/django-cors-headers
 
-CORS_ORIGIN_ALLOW_ALL = False # Always false
+# CORS_ORIGIN_ALLOW_ALL = True # Always false
 
-CORS_ORIGIN_WHITELIST = ( # Authorize origins here
-    'http//:localhost:4200',
-)
+# CORS_ORIGIN_WHITELIST = ( # Authorize origins here
+#     'http//:localhost:4200',
+# )
 
 
 # Internationalization
@@ -158,3 +157,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "live-static-files", "media-root")
 
 
 from toollibrary.tlrestconf.main import *
+from toollibrary.corsconf import *
