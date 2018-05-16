@@ -12,6 +12,11 @@ import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { DonateComponent } from './donate/donate.component';
+import { MembershipComponent } from './membership/membership.component';
+import { VolunteerComponent } from './volunteer/volunteer.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,11 @@ import { HeaderComponent } from './header/header.component';
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
+    AboutComponent,
+    ContactComponent,
+    DonateComponent,
+    MembershipComponent,
+    VolunteerComponent,
   ],
   imports: [
     BrowserModule,
