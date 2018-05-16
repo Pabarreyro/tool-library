@@ -19,19 +19,15 @@ from django.conf.urls.static import static
 from django.conf import settings
 from rest_framework.documentation import include_docs_urls
 
-
-
 urlpatterns = [
-    url(r'^', include_docs_urls(title='Tool Library API Documentation')),
-    url(r'^admin/', admin.site.urls),
-    url(r'^api/tools/', include('tools.api.urls')),
-    url(r'^api/auth/', include('accounts.api.urls', namespace='api-auth')),
-    url(r'^api/user/', include('accounts.api.user.urls', namespace='api-user')),    
-    
+  url(r'^', include_docs_urls(title='Tool Library API Documentation')),
+  url(r'^admin/', admin.site.urls),
+  url(r'^api/tools/', include('tools.api.urls')),
+  url(r'^api/auth/', include('accounts.api.urls', namespace='api-auth')),
+  url(r'^api/user/', include('accounts.api.user.urls', namespace='api-user')),
+
 ]
 
-
-
 if settings.DEBUG:
-    urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+  urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+  urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
