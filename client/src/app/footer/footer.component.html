@@ -2,42 +2,42 @@
   <div class="footer-container-inner">
 
     <div class="footer-left-nav">
-      <img [src]="'/assets/img/logo-footer.png'" alt="">
+      <a routerLink="/"><img [src]="'/assets/img/logo-footer.png'" alt=""></a>
     </div>
 
     <div class="footer-center-nav">
-      <p class="footer-big-link"><a href="#">become a member.</a></p>
-      <p class="footer-big-link"><a href="#">become a volunteer.</a></p>
-      <p class="footer-big-link"><a href="#">donate today.</a></p>
+      <p class="footer-big-link"><a routerLink="/membership">become a member.</a></p>
+      <p class="footer-big-link"><a routerLink="/volunteer">become a volunteer.</a></p>
+      <p class="footer-big-link"><a routerLink="/donate">donate today.</a></p>
     </div>
 
     <div class="footer-right-nav">
       <ul class="list-unstyled footer-right-nav-list">
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">home</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/">home</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">what is a tool library</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/about">what is a tool library</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">membership</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/membership">membership</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">volunteer</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/volunteer">volunteer</a>
         </li>
       </ul>
       <ul class="list-unstyled footer-right-nav-list">
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">tools</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/">tools</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">group loans</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/grouploans">group loans</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">about</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/about">about</a>
         </li>
         <li class="footer-right-nav-list-item">
-          <a class="footer-right-nav-list-item-link" href="#">contact</a>
+          <a class="footer-right-nav-list-item-link" routerLink="/contact">contact</a>
         </li>
       </ul>
     </div>
