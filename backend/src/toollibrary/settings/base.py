@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     's3direct',
     'tools',
     'accounts',
+    'users'
 
 ]
 

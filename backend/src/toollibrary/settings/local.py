@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     's3direct',
     'accounts',
     'tools',
-
+    'users'
 ]
 
 MIDDLEWARE = [
