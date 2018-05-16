@@ -34,4 +34,5 @@ p {
 
 #main {
   padding: 100px 50px 50px;
+  min-height: calc(100vh - 70px);
 }
