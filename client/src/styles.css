@@ -1,1 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:300,400');
 
+/* BASE STYLES */
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#main {
+  padding: 100px 50px 50px;
+  min-height: calc(100vh - 70px);
+}
