@@ -1,10 +1,65 @@
 <nav id="navbar" (window:resize)="onResize()">
 
+  <!-- FULL WIDTH -->
+  <div class="nav-wrapper" *ngIf="toggleNavBar">
+    <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
+    <div class="nav" id="nav-links">
+      <div id="nav-links-top">
+
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="about">About</a>
+        </div>
+
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="volunteer">Volunteer</a>
+        </div>
+
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="membership">Membership</a>
+        </div>
+      </div>
+
+      <div id="nav-links-bottom">
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="login">Login</a>
+        </div>
+
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="register">Register</a>
+        </div>
+
+        <div class="underline-link">
+          <a class="underline-link nav-link" routerLink="dashboard">Dashboard</a>
+        </div>
+
+      </div> 
+    </div>
+
+    <div id="search">
+      <input class="form-control" placeholder="Search">
+      <button class="btn btn-primary">Search</button>
+    </div>
+
+  </div>
+
   <!-- MOBILE WIDTH -->
   <div class="navbar-header" *ngIf="toggleMobileNavBar">
-      <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
-      <div class="mobile-nav-wrapper">
+      <h1 class="underline-link"><a class="navbar-brand" routerLink="/" (click)="showhide()">Tool Library</a></h1>
+      <div *ngIf="showhideMobileNavBar" class="mobile-nav-wrapper">
         <div class="mobile-nav" id="mobile-nav-links">
+
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" routerLink="about">About</a>
+          </div>
+
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" routerLink="volunteer">Volunteer</a>
+          </div>
+
+          <div class="underline-link mobile-nav-link">
+            <a class="underline-link" routerLink="membership">Membership</a>
+          </div>
+
           <div class="underline-link mobile-nav-link">
             <a class="underline-link" routerLink="login">Login</a>
           </div>
@@ -23,28 +78,5 @@
         </div>
       </div>
   </div>
-
-  <!-- FULL WIDTH -->
-  <div class="nav-wrapper" *ngIf="toggleNavBar">
-    <h1 class="underline-link"><a class="navbar-brand" routerLink="">Tool Library</a></h1>
-    <div class="nav" id="nav-links">
-      <div class="underline-link">
-        <a class="underline-link nav-link" routerLink="login">Login</a>
-      </div>
-
-      <div class="underline-link">
-        <a class="underline-link nav-link" routerLink="register">Register</a>
-      </div>
-
-      <div class="underline-link">
-        <a class="underline-link nav-link" routerLink="dashboard">Dashboard</a>
-      </div>
-    </div>
-    <div id="search">
-      <input class="form-control" placeholder="Search">
-      <button class="btn btn-primary">Search</button>
-    </div>
-  </div>
-
 
 </nav>

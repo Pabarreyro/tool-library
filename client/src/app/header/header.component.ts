@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   toggleNavBar: boolean = true;
   toggleMobileNavBar: boolean = false;
+  showhideMobileNavBar: boolean = false;
   breakpoint: number = 885;
   constructor() { }
 
@@ -26,5 +27,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  showhide() {
+    return this.showhideMobileNavBar = !this.showhideMobileNavBar;
+  }
 
 }
