@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DonateComponent } from './donate/donate.component';
 import { MembershipComponent } from './membership/membership.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
+import { GrouploansComponent } from './grouploans/grouploans.component';
 
 const appRoutes: Routes = [
   {
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'grouploans',
+    component: GrouploansComponent
   }
 ];
 
