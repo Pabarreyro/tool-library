@@ -1,23 +1,30 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
 <div class="tools-contain">
   <div *ngFor="let tool of tools"  class="toolsList">
     <div class="toolItemHeader">
       <span title="title" class="toolName" style="cursor: pointer;">{{tool.title}}
-        <span class="avail-y">{{tool.status}}
-          <span class="icon-zip-up"><button type="button" class="btn btn-lg btn-info "></button>
+        <p class="avail-y" attr.data-value="{{tool.status}}">{{tool.status}}</p>
+          <span class="icon-zip-up">
+            <div class="collapsed" data-toggle="collapse" attr.data-target="#{{tool.pk}}" aria-expanded="false" attr.aria-controls="{{tool.pk}}"></div>
           </span>
-        </span>
+
       </span>
     </div>
-    <div class="" id="toolAttrCollapse">
+    <div class="collapse" attr.id="{{tool.pk}}">
       <div class="card card-body AttrDetails">
         <ul>
           <li>Descr: {{tool.description}} </li>
           <li>Parts: </li>
           <li>Brand: {{tool.brand}} </li>
-          <li>ID:{{tool.pk}}</li>
           <li>Late Fine: {{tool.lateFee}}</li>
         </ul>
+
       </div>
     </div>
+    <!-- <span class="collapsed" data-toggle="collapse" attr.data-target="#{{tool.pk}}" aria-expanded="false" attr.aria-controls="{{tool.pk}}"> -->
+      <img class="card-img-bottom" data-toggle="img-collapse" attr.src="{{tool.imgUrl}}" alt="Card image cap">
+
   </div>
+
 </div>

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Tool } from '../models/tool.model';
 import { ToolService } from '../tool.service';
-
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-tool-info',

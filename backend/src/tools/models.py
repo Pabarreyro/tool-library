@@ -34,6 +34,7 @@ class ToolManager(models.Manager):
   def all(self):
     return self.get_queryset().active()
 
+
   def featured(self):
     return self.get_queryset().featured()
 
@@ -42,6 +43,7 @@ class ToolManager(models.Manager):
     if qs.count() == 1:
       return qs.first()
     return None
+
 
   def search(self, query):
     return self.get_queryset().active().search(query)
@@ -54,16 +56,18 @@ class Tool(models.Model):
   brand = models.CharField(max_length=120)
   dueDate = models.DateTimeField(blank=True, null=True)
   status = models.CharField(max_length=120, default='available', choices=STATUS_CHOICES)
-  imgUrl = models.CharField(max_length=120)
+  imgUrl = models.Filefield()
   active = models.BooleanField(default=True)
   featured = models.BooleanField(default=True)
   late_fine = models.IntegerField(
+
     default=6,
     help_text='In US dollars',
     validators=[
       MaxValueValidator(100),
       MinValueValidator(0)
     ]
+
 
   )
 

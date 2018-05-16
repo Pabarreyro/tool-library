@@ -1,12 +1,13 @@
 .tools-contain {
-display: flex;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
 
 .toolsList {
   width: 258px;
-margin: 10px;
+  margin: 10px;
 }
 
 .toolItemHeader {
@@ -15,23 +16,103 @@ margin: 10px;
 }
 
 
-span.avail-y {
-  display:block;
+.avail-y {
+  /* display:inline-block; */
   font-style: italic;
   color: #777777;
+  margin-top: 5%;
 }
 
-.icon-zip-up {
-margin-left: 130px;
+ul {
+  padding-left: 5px;
 }
 
 
-.collapse .toolItemHeader:after {
-    font-family: 'FontAwesome';
-    content: "\f068";
-    float: right;
+
+[data-value="available"] {
+  color: rgba(0, 123, 255, 0.5);
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
 }
-.collapse .toolItemHeader.collapsed:after {
-    /* symbol for "collapsed" panels */
-    content: "\f067";
+
+[data-value="borrowed"] {
+  color: #8d3b3b;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
 }
+
+[data-value*="due"] {
+  color: rgba(4, 234, 166, 0.47);
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+
+[data-toggle="collapse"]:after {
+  display: inline-block;
+  font: normal normal normal 10px/1 FontAwesome;
+  font-size: 14px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f054";
+  transform: rotate(90deg) ;
+  transition: all linear 0.25s;
+  margin-left: 93%;
+  color: white;
+  z-index: 100;
+  /* position: absolute; */
+
+}
+
+[data-toggle="collapse"].collapsed:after {
+  transform: rotate(0deg) ;
+}
+
+[data-toggle="img-collapse"].collapsed:after {
+  display: none;
+  visibility: hidden;
+}
+
+.card-img-bottom {
+z-index: 1;
+/* position: absolute; */
+
+}
+
+/* .collapse {
+  overflow: auto !important;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+} */
+.card-img-bottom {
+  z-index: -1;
+  position: fix;
+}
+
+.collapse {
+
+}
+
+ {
+
+}
+overflow: auto !important;
+    position: absolute;
+    left: 0px;
+    line-height: 1.5;
+    background-color: rgba(234, 234, 234, 0.95);
+    margin: 0;
+    width: 100%;
+    padding: 0 12px;
+    font-size: 0.96em;
+    text-align: left;
+    z-index: 1;

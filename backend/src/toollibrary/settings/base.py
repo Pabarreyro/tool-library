@@ -30,17 +30,19 @@ ALLOWED_HOSTS = ['tools-libarary.herokuapp.com', 'localhost:4200', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-  'django.contrib.admin',
-  'django.contrib.auth',
-  'django.contrib.contenttypes',
-  'django.contrib.sessions',
-  'django.contrib.messages',
-  'django.contrib.staticfiles',
-  'rest_framework',
-  'corsheaders',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
 
-  'accounts',
-  'tools',
+    'storages',
+    'tools',
+    'accounts',
+
 ]
 
 MIDDLEWARE = [
@@ -110,16 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
   },
 ]
 
-# Cors-header configuration
-# Note: CORS_ORIGIN_REGEX_WHITELIST also available for authorizing origins.
-# https://github.com/ottoyiu/django-cors-headers
-
-CORS_ORIGIN_ALLOW_ALL = True  # Always false
-
-CORS_ORIGIN_WHITELIST = (  # Authorize origins here
-  'http//:localhost:4200',
-)
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -135,6 +127,26 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+#
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+# )
+#
+# STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+#
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+AWS_ACCESS_KEY_ID = os.environ.get(ACCESS_KEY_ID)
+AWS_SECRET_ACCESS_KEY = os.environ.get(SECRET_ACCESS_KEY)
+AWS_STORAGE_BUCKET_NAME = 'tool-lib-static'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
 
 STATIC_URL = '/static/'
 
@@ -145,6 +157,7 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 MEDIA_URL = "/media/"
 
