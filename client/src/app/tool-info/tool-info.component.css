@@ -36,8 +36,8 @@
   text-transform: uppercase;
 }
 
-[data-value*="due"] {
-  color: rgba(4, 234, 166, 0.47);
+[data-value*="overDue"] {
+  color: #dc3545c9;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;

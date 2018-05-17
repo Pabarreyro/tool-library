@@ -1,0 +1,22 @@
+.wrapper {
+  margin:10px 12.5% 75px 12.5%;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.image {
+  float:left;
+  margin: 0 20px 30px 0;
+  width:30%;
+}
+
+img {
+  width: 100%;
+}
+
+.text-link,.text-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
