@@ -33,7 +33,9 @@ export class LoginComponent {
   }
 
   sendUserAuthRequest(username: string, password: string) {
-    this.userService.loginUser(username, password);
+    this.userService.loginUser(username, password).subscribe(response => {
+      console.log(response);
+    });
     this.router.navigate(['']);
   }
 }

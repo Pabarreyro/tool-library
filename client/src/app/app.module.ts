@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { routing } from './app.routing';
 import * as $ from 'jquery';
 
@@ -40,6 +41,7 @@ import { GrouploansComponent } from './grouploans/grouploans.component';
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     routing
   ],
   providers: [],
