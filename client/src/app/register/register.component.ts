@@ -20,7 +20,7 @@ export class RegisterComponent {
   submitNewUser(username, email, passwordFirst, passwordSecond) {
     this.validateInput(username, email, passwordFirst, passwordSecond);
     if (this.usernameValid && this.emailValid && this.passwordFirstValid && this.passwordSecondValid) {
-      this.sendNewUserRequest(username, email, passwordFirst);
+      this.sendNewUserRequest(username, email, passwordFirst, passwordSecond);
     } else {
       alert('Registration Failed.');
     }
@@ -56,8 +56,10 @@ export class RegisterComponent {
     }
   }
 
-  sendNewUserRequest(username: string, email: string, password: string) {
-    this.userService.createNewUser(username, email, password);
+  sendNewUserRequest(username, email, password, password2) {
+    this.userService.createNewUser(username, email, password, password2).subscribe(response => {
+      console.log(response);
+    });
     this.router.navigate(['']);
   }
 }
