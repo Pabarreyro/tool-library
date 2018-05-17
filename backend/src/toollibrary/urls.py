@@ -26,6 +26,8 @@ urlpatterns = [
   url(r'^api/auth/', include('accounts.api.urls', namespace='api-auth')),
   url(r'^api/user/', include('accounts.api.user.urls', namespace='api-user')),
 
+  url(r'^api/users/', include('accounts.api.users.urls', namespace='api-users')),
+
 ]
 
 if settings.DEBUG:
