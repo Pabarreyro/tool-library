@@ -18,7 +18,7 @@ Jinja2==2.10
 MarkupSafe==1.0
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
-PyJWT==1.6.1
+PyJWT==2.4.0
 docutils==0.14
 jmespath==0.9.3
 python-dateutil==2.7.3
